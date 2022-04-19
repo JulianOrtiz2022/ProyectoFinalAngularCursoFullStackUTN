@@ -1,0 +1,21 @@
+<form  [formGroup]="myFormLogin" (ngSubmit)="registrarseLogin()">
+    <div>
+    <label>Email</label>
+    <input type="email" formControlName="email">
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" formControlName="clave">
+    </div>
+    <div *ngIf="myFormLogin.get('clave')?.errors 
+        && myFormLogin.get('clave')?.dirty">
+       <p *ngIf="myFormLogin.get('clave')?.hasError('required')">El campo es obligatorio</p>
+       <p *ngIf="myFormLogin.get('clave')?.hasError('minlength')">Debe tener al menos 6 caracteres</p>
+       <p *ngIf="myFormLogin.get('clave')?.hasError('maxlength')">No debe superar los 10 caracteres</p>
+    </div>
+    <div class="example-button-row">
+        <button type="submit" (click)="login()">Ingresar</button>
+    </div>
+</form>
+
+  

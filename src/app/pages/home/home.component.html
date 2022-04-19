@@ -1,0 +1,15 @@
+<div>
+    <div *ngFor="let producto of productos">
+   <app-producto
+       [data]="producto"
+   ></app-producto>
+    </div>
+    <div *ngFor="let producto of productosTv">
+    <app-productos-tv
+        [data1]="producto"
+    ></app-productos-tv>
+    </div>
+</div>
+ 
+
+

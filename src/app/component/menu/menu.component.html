@@ -1,0 +1,19 @@
+<mat-list>
+    <div mat-subheader>Menu</div>
+     <mat-list-item routerLink="/Home">
+      <mat-icon mat-list-icon>home</mat-icon>
+    <div mat-line>Inicio</div>
+    </mat-list-item>
+      <mat-list-item routerLink="/Login" *ngIf="!isLogin">
+        <mat-icon mat-list-icon>account_circle</mat-icon>
+        <div mat-line>Ingresar</div>
+      </mat-list-item>
+      <mat-list-item routerLink="/Registro" *ngIf="!isLogin">
+        <mat-icon mat-list-icon>face</mat-icon>
+    <div mat-line>Registrarse</div>
+        </mat-list-item>
+    <mat-list-item role="listitem" (click)="salir()" *ngIf="isLogin">
+            <div mat-line >Salir</div>
+            <mat-icon mat-list-icon>logout</mat-icon>
+    </mat-list-item>
+  </mat-list> 

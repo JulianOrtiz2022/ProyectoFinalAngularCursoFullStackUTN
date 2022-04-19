@@ -1,0 +1,6 @@
+<div>
+    <p>{{data1.title}}</p>
+    <p>{{data1.price | currency: 'AR$'}}</p>
+    <img src="{{data1?.thumbnail}}" alt="">
+    <button routerLink="/producto/{{data1.id}}">Ver Detalle</button>
+</div>
